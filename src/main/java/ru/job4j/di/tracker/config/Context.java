@@ -3,7 +3,6 @@ package ru.job4j.di.tracker.config;
 import java.lang.reflect.Constructor;
 import java.util.*;
 
-
 public class Context {
     private Map<String, Object> els = new HashMap<String, Object>();
 
@@ -26,6 +25,7 @@ public class Context {
             throw new IllegalStateException("Coun't create an instance of: " + cl.getCanonicalName(), e);
         }
     }
+
     public <T> T get(Class<T> inst) {
         return (T) els.get(inst.getCanonicalName());
     }
