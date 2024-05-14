@@ -1,7 +1,9 @@
 package ru.job4j.di.tracker.controller;
 
-import java.util.Scanner;
+import org.springframework.stereotype.Component;
 
+import java.util.Scanner;
+@Component
 public class ConsoleInput {
     private Scanner scanner = new Scanner(System.in);
 
