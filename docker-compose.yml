@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  job4j_db:
+    build:
+      context: .
+    container_name:   job4j_db2
+  job4j_docker:
+    build:
+      context: .
+    environment:
+      - API=job4j_db2
+    container_name: job4j_di
+    depends_on:
+      - job4j_db2
